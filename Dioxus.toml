@@ -3,6 +3,11 @@
 # App (Project) Name
 name = "notabene"
 
+[bundle]
+identifier = "com.jaeger.notabene"
+publisher = "Jaeger"
+icon = ["assets/icon.png"]
+
 [web.app]
 
 # HTML title tag content
