@@ -26,7 +26,7 @@ fn App() -> Element {
 
         div { class: "flex flex-col max-h-lvh h-dvh",
             TopBar {}
-            div { class: "flex-row flex-grow",
+            div { class: "flex-row grow",
                 Sidebar {}
                 Hero {}
             }
