@@ -1,7 +1,9 @@
 use dioxus::prelude::*;
 
-use components::Hero;
+use bars::*;
+use components::*;
 
+mod bars;
 mod components;
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");
@@ -22,7 +24,13 @@ fn App() -> Element {
         document::Link { rel: "stylesheet", href: MAIN_CSS }
         document::Link { rel: "stylesheet", href: TAILWIND_CSS }
 
-        Hero {}
-
+        div { class: "flex flex-col max-h-lvh h-dvh",
+            TopBar {}
+            div { class: "flex-row flex-grow",
+                Sidebar {}
+                Hero {}
+            }
+            StatusBar {}
+        }
     }
 }
